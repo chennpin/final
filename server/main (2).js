@@ -147,7 +147,7 @@ var finalIsDifficult = function(msg){
 };
 
 var finalIsOk = function(msg){
-	let finalRegex = /ok|good|great|fine/i;
+	let finalRegex = /ok|good|great|fine|not bad/i;
 	let finalRequest = msg.match(finalRegex);
 	if (finalRequest === null){
 		return "";
@@ -265,10 +265,10 @@ Meteor.methods({
 			ELIZAResponse = thankResponse(msg);
 			}
 			if(ELIZAResponse === "") {
-				ELIZAResponse = finalIsDifficult(msg);
+				ELIZAResponse = finalIsOk(msg);
 			}
 			if(ELIZAResponse === "") {
-				ELIZAResponse = finalIsOk(msg);
+				ELIZAResponse = finalIsDifficult(msg);
 			}
 			if(ELIZAResponse === "") {
 				ELIZAResponse = stupidResponse(msg);
