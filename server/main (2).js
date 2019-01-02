@@ -169,7 +169,7 @@ var thankResponse = function(msg){
 		return "";
 	}
 	else {
-		let thankResponse = "You're welcome!"
+		let thankResponse = "You're welcome! Is there anything else I can help you?"
 		return thankResponse;
 	}
 };
