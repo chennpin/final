@@ -93,16 +93,16 @@ var YesReply = function(msg) {
 		randomIndex = Math.floor(randomIndex);
 		let YesResponse = 
 			[
-				"OK! Then wait for an hour.",
-				"OK! Then wait for an hour.",
-				"OK! Then wait for an hour.",
-				"OK! I wlii be right back. Wait a second!",
-				"OK! I wlii be right back. Wait a second!",
-				"OK! I wlii be right back. Wait a second!",
-				"~2000 YEARS LATER~",
-				"~2000 YEARS LATER~",
-				"YES or YES (〃∀〃)",
-				"YES or YES (〃∀〃)",
+				"Yes or No",
+				"Good.Then What else do you want to know?",
+				"Nice. I agree with you!",
+				"OK.Then do you want today's weather?",
+				"YES or YES (〃∀〃)" ,
+				"Yes or No",
+				"Good.Then What else do you want to know?",
+				"Nice. I agree with you!",
+				"OK.Then do you want today's weather?",
+				"YES or YES (〃∀〃)" 
 			];
 		return YesResponse[randomIndex];
 	}
