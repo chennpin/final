@@ -57,7 +57,7 @@ var weatherInfo = function(msg) {
 };
 
 var sayHello = function(msg) {
-	let helloRegex = /.*(hi|hello|hey).*/i;
+	let helloRegex = /.*(hi|hello|hey|how are you).*/i;
 	let helloRequest = msg.match(helloRegex);
 	if(helloRequest === null) {
 		return "";
