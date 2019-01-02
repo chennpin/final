@@ -82,6 +82,60 @@ var sayHello = function(msg) {
 	}
 };
 
+var YesReply = function(msg) {
+	let YesRegex = /yes/i;
+	let YesRequest = msg.match(YesRegex);
+	if(YesRequest === null) {
+		return "";
+	}
+	else {
+		let randomIndex = Math.random()*10;
+		randomIndex = Math.floor(randomIndex);
+		let YesResponse = 
+			[
+				"OK! Then wait for an hour.",
+				"OK! Then wait for an hour.",
+				"OK! Then wait for an hour.",
+				"OK! I wlii be right back. Wait a second!",
+				"OK! I wlii be right back. Wait a second!",
+				"OK! I wlii be right back. Wait a second!",
+				"~2000 YEARS LATER~",
+				"~2000 YEARS LATER~",
+				"YES or YES (〃∀〃)",
+				"YES or YES (〃∀〃)",
+			];
+		return YesResponse[randomIndex];
+	}
+};
+
+var NoReply = function(msg) {
+	let NoRegex = /no/i;
+	let NoRequest = msg.match(NoRegex);
+	if(NoRequest === null) {
+		return "";
+	}
+	else {
+		let randomIndex = Math.random()*10;
+		randomIndex = Math.floor(randomIndex);
+		let NoResponse = 
+			[
+				"Can't say no!",
+				"Yes Yes Yes Yes Yes",
+				"OK.",
+				"Bye",
+				"OK.see you later",
+				"OK. Then what do you want to know?",
+				"Can't say no! ",
+				"Yes Yes Yes Yes Yes",
+				"OK.",
+				"Bye",
+				"OK.see you later",
+				"OK. Then what do you want to know?"
+			];
+		return NoResponse[randomIndex];
+	}
+};
+
 var insultedAnger = function(msg){
 	let angryRegex = /stupid|dumb|silly/i;
 	let angryRequest = msg.match(angryRegex);
@@ -159,7 +213,7 @@ var finalIsOk = function(msg){
 				"You're as good as me!",
 				"Keep Going!",
 				"You must be very hard-working~",
-				"Go get A+!!I am~",
+				"Good for you!",
 				"WOW That's good! Good luck~",
 				"Well done! You are a good student, aren't you?",
 				"Oh That's sounds great! Give you a thumbs-up d(`･∀･)b",
@@ -266,6 +320,12 @@ Meteor.methods({
 			}
 			if(ELIZAResponse === "") {
 				ELIZAResponse = finalIsOk(msg);
+			}
+			if(ELIZAResponse === "") {
+				ELIZAResponse = YesReply(msg);
+			}
+			if(ELIZAResponse === "") {
+				ELIZAResponse = NoReply(msg);
 			}
 			if(ELIZAResponse === "") {
 				ELIZAResponse = finalIsDifficult(msg);
