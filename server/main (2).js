@@ -110,8 +110,8 @@ var insultedAnger = function(msg){
 
 var thankResponse = function(msg){
 	let thankRegex = /thank/i;
-	let thankRequest = msg.match(finalRegex);
-	if (finalRequest === null){
+	let thankRequest = msg.match(thankRegex);
+	if (thankRequest === null){
 		return "";
 	}
 	else {
