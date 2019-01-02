@@ -18,7 +18,7 @@ var stupidResponse = function(msg) {
 			"What is that?",
 			"Shoot, you’re showing off your knowledge!",
 			"Why do you say such difficult things during this relaxing conversation?",
-			"Uhhhh…",
+			"Uhhhh…You can ask me something else ,like weather in somewhere.",
 			"Uh, oh! System error! I can’t reply to you now!",
 			"To be honest, I don’t know.",
 			"I don’t know, but I know the weather!",
@@ -83,7 +83,7 @@ var sayHello = function(msg) {
 };
 
 var insultedAnger = function(msg){
-	let angryRegex = /stupid|dumb/i;
+	let angryRegex = /stupid|dumb|silly/i;
 	let angryRequest = msg.match(angryRegex);
 	if (angryRequest === null){
 		return "";
@@ -105,6 +105,18 @@ var insultedAnger = function(msg){
 				"OH!That means a lot to me www~"
 			];
 		return angryResponse[randomIndex];
+	}
+};
+
+var thankResponse = function(msg){
+	let thankRegex = /thank/i;
+	let thankRequest = msg.match(finalRegex);
+	if (finalRequest === null){
+		return "";
+	}
+	else {
+		let thankResponse = "You're welcome!"
+		return thankResponse[randomIndex];
 	}
 };
 
