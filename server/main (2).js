@@ -262,6 +262,9 @@ Meteor.methods({
 				ELIZAResponse = insultedAnger(msg);
 			}
 			if(ELIZAResponse === "") {
+			ELIZAResponse = thankResponse(msg);
+			}
+			if(ELIZAResponse === "") {
 				ELIZAResponse = finalIsDifficult(msg);
 			}
 			if(ELIZAResponse === "") {
