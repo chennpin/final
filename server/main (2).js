@@ -116,7 +116,7 @@ var thankResponse = function(msg){
 	}
 	else {
 		let thankResponse = "You're welcome!"
-		return thankResponse[randomIndex];
+		return thankResponse;
 	}
 };
 
